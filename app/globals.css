@@ -45,6 +45,7 @@ p {
 }
 
 a {
+	display: flex;
 	text-decoration: none;
 	color: inherit;
 }

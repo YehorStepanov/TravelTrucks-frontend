@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import 'modern-normalize';
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import { comfortaa, lato } from "./fonts";
+import { inter } from "./fonts";
 
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${lato.className} ${comfortaa.className}`}>
+    <html className={`${inter.className}`}>
       <body>
         <Header />
         {children}

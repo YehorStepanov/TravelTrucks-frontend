@@ -1,13 +1,7 @@
-import { Lato, Comfortaa } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-export const lato = Lato({
+export const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
-
-export const comfortaa = Comfortaa({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
