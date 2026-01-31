@@ -1,0 +1,7 @@
+.layout {
+  display: flex; 
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 64px;
+  margin: 48px 64px 52px 64px;
+}

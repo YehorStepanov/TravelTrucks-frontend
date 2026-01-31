@@ -21,7 +21,7 @@ export default function Header() {
             <Link
               className={clsx(
                 css.nav_item,
-                pathname.startsWith('/') && css.active,
+                pathname.endsWith('/') && css.active,
               )}
               href="/"
             >

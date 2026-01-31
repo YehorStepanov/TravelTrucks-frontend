@@ -1,0 +1,121 @@
+.sidebar {
+  width: 360px;
+}
+.locationDiv {
+  margin-bottom: 40px;
+}
+.locationLabel {
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+.parent {
+  position: relative;
+}
+.svgImage {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.locationField {
+  display: flex;
+  flex-direction: row;
+  background: var(--inputs);
+  padding-left: 48px;
+
+  border-radius: 12px;
+  width: 360px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
+}
+.textFilters {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+  margin-bottom: 32px;
+}
+.equipmentTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+}
+.fields {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 360px;
+  width: 100%;
+  gap: 8px;
+}
+.smallLine {
+  display: flex;
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid var(--gray-light);
+}
+.field {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  width: 112px;
+  height: 96px;
+}
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.field:hover,
+.field:active,
+.field:focus,
+.field:checked {
+  border: 1px solid var(--button);
+}
+.field:has(.input:checked) {
+  border: 1px solid var(--button);
+}
+.typeDiv {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  width: 166px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  background: var(--button);
+  color: var(--white);
+}
+.searchButton:focus,
+.searchButton:hover {
+  background: var(--button-hover);
+}

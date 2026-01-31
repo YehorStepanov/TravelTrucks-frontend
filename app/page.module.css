@@ -48,3 +48,8 @@
   letter-spacing: -0.01em;
   color: var(--white);
 }
+.link:focus,
+.link:hover {
+  background: var(--button-hover);
+}
+
