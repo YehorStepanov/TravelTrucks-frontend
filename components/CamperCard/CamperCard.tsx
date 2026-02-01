@@ -27,7 +27,7 @@ export default function CamperCard({ truck }: CamperCardProps) {
     <div className={css.card}>
       {/* Image */}
       <Image
-        src={gallery[0]?.thumb}
+        src={gallery[0]?.original}
         alt={name}
         width={292}
         height={320}
