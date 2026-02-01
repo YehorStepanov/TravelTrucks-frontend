@@ -3,6 +3,7 @@ import 'modern-normalize';
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import { inter } from "./fonts";
+import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 
 
 export const metadata: Metadata = {
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${inter.className}`}>
+      <TanStackProvider>
       <body>
         <Header />
         {children}
       </body>
+      </TanStackProvider>
     </html>
   );
 }

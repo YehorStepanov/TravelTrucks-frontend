@@ -5,6 +5,14 @@ export type FeatureConfigItem = {
   icon: string;
   isEnabled: (truck: Truck) => boolean;
 };
+export const vehicleSpecsKeys = [
+  'form',
+  'length',
+  'width',
+  'height',
+  'tank',
+  'consumption',
+] as const;
 
 export const FEATURES_CONFIG: FeatureConfigItem[] = [
   {

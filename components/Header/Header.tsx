@@ -31,7 +31,7 @@ export default function Header() {
           <li className={css.nav_item}>
             <Link className={clsx(
                 css.nav_item,
-                pathname.startsWith('/catalog') && css.active,
+                pathname.endsWith('/catalog') && css.active,
               )} href="/catalog">
               Catalog
             </Link>

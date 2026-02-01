@@ -25,3 +25,19 @@ export async function getCampers(filters: FilterOptions) {
     return null;
   }
 }
+
+interface getCampersByIdAnswer {
+  data: Truck;
+  message: string;
+  status: number;
+}
+
+export async function getCampersById(id: string) {
+  try {
+    const { data } = await api.get<getCampersByIdAnswer>(`/campers/${id}`);
+    return data.data;
+  } catch (err) {
+    console.log(err);
+    return null;
+  }
+}

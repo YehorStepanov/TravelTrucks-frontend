@@ -1,0 +1,63 @@
+.reviewsContainer {
+  width: 631px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.circle {
+  position: relative;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background: var(--badges);
+}
+.char {
+  position: absolute;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--button);
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.nameRating {
+  margin-top: 8px;
+}
+
+.name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
+  margin-bottom: 4px;
+}
+.starsList {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.active {
+  fill: var(--rating);
+}
+.disable {
+  fill: var(--badges);
+}
+
+.comment{
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--text);
+}

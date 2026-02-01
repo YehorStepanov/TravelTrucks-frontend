@@ -31,6 +31,7 @@ export interface Truck {
   water: boolean;
   gallery: [
     {
+      _id: string;
       thumb: string;
       original: string;
     },
@@ -40,6 +41,7 @@ export interface Truck {
       reviewer_name: string;
       reviewer_rating: number;
       comment: string;
+      _id: string;
     },
   ];
 }
