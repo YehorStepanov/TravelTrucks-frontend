@@ -7,13 +7,44 @@ import {
 import TruckPageClient from './truckPage.client';
 import { getCampersById } from '@/lib/api/clientApi';
 
-export const metadata: Metadata = {
-  title: 'Щоденник',
-  description: 'Проглядайте та редагуйте записи у щоденнику',
-};
-
 interface TruckPageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
+}
+
+export async function generateMetadata({ params }: TruckPageProps): Promise<Metadata> {
+  const truck = await getCampersById(params.id);
+
+  if (!truck) {
+    return {
+      title: 'Camper not found',
+    };
+  }
+
+  const { name, description, gallery } = truck;
+
+  return {
+    title: name,
+    description: description.slice(0, 150),
+    openGraph: {
+      title: name,
+      description,
+      images: [
+        {
+          url: gallery?.[0]?.original || '/img/og-default.jpg',
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: name,
+      description,
+      images: [gallery?.[0]?.original || '/img/og-default.jpg'],
+    },
+    alternates: {
+      canonical: `/catalog/${params.id}`,
+    },
+  };
 }
 
 export default async function TruckPage({ params }: TruckPageProps) {
